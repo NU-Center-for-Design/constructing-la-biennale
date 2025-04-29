@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{{title}}</title>
+<title>{{title}}</title>
+<link rel="stylesheet" href="{{ '/styles/bundle.css' | url}}">
+</head>
+<body class="has-navbar-fixed-top">
+<section class="section">
+  <div class="columns">
+    <div class="column is-8 is-offset-2">
+      <div class="content">
+        <h1>{{ title}}</h1>
+        {{ content | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+<script src="{{ '/scripts/scripts.js' | url }}"></script>
+</body>
+</html>

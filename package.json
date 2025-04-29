@@ -1,0 +1,16 @@
+{
+  "name": "constructing-la-biennale",
+  "version": "1.0.0",
+  "description": "Interactive Booklet for Constructing la Biennale",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy --pathprefix='/2024/'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
