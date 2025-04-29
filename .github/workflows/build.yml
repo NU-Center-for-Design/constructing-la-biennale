@@ -1,4 +1,4 @@
-name: Build Eleventy
+name: Deploy Eleventy site to GitHub Pages
 
 on:
   push:
@@ -6,28 +6,26 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-20.04
-
-    strategy:
-      matrix:
-        node-version: [18.x]
+  build-deploy:
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '20'
 
-      - name: Install dependencies & build
-        run: |
-          npm ci
-          npm run build          
+      - name: Install dependencies
+        run: npm install
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Build site
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          publish_dir: ./build
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
