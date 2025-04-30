@@ -1,22 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
-<title>Home</title>
-<link rel="stylesheet" href="/styles/bundle.css">
-</head>
-<body class="has-navbar-fixed-top">
-<section class="section">
-  <div class="columns">
-    <div class="column is-8 is-offset-2">
-      <div class="content">
-        <h1>Home</h1>
-        <p>Testing 1 .. 2 .. 2</p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constructing la Biennale</title>
+<style>
 
-      </div>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 2vw; */
+}
+
+body {
+    margin: 0;
+    color: #faea27;
+    background-color: #26418f;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 800px;
+}
+
+.header {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    height: calc(70px + 2em);
+}
+
+.intro {
+    position: relative;
+    margin: 4em auto 4em auto;
+    padding: 1em;
+    padding: 1em;
+    max-width: 35em;
+}
+
+.titlegraphic {
+    position: relative;
+    height: 1px;
+    margin-bottom: 110%;
+}
+
+.titlegraphic img {
+    position: absolute;
+    top: -175%;
+    left: -50%;
+    width: 150%;
+}
+
+.logos {
+    padding: 1em 1em 4em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logos img {
+    height: 70px;
+}
+
+a {
+    color: inherit;
+}
+
+@media only screen and (max-width: 500px) {
+    .logos {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 35em;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="page">
+    <div class="header">
+        <div class="intro">
+            <div class="titlegraphic">
+                <img src="images/constructing-la-biennale.svg" alt="Constructing la Biennale">
+            </div>
+            <p>A project by <b>Politecnico di Torino / Dipartimento di Architettura e Design</b> and <b>Northeastern University</b></p>
+            <p>Developed for INTELLIGENS. NATURAL. ARTIFICIAL. COLLECTIVE<br> 
+            <b>19th International Architecture Exhibition - La Biennale di Venezia</b></p>
+            <p>10 May - 23 November 2025 at the Giardini della Biennale</p>
+            <p><a href="downloads/Contrucing_la_Biennale_LR.pdf">Download the PDF booklet</a></p>
+        </div>
     </div>
-  </div>
-</section>
-<script src="/scripts/scripts.js"></script>
+    <div class="footer">
+        <div class="logos">
+            <img src="images/politecnico-and-dad.svg" alt="Politecnico di Torino / Dipartimento di Architettura e Design">
+            <img src="images/northeastern-university.svg" alt="Northeastern University">
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
