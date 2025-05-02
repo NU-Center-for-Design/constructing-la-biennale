@@ -64,6 +64,11 @@ body {
   line-height: 1.2em;
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 16px;
+  }
+}
 a {
   color: inherit;
 }
@@ -313,7 +318,7 @@ p.big {
   }
   .section.pagenav {
     flex-direction: row;
-    font-size: 0.75em;
+    font-size: 0.9em;
   }
 }
 .intro {
@@ -423,6 +428,14 @@ p.big {
   text-align: center;
 }
 
+@media screen and (max-width: 800px) {
+  .person {
+    padding: 0.5em;
+  }
+  .bio-title {
+    margin-bottom: 0;
+  }
+}
 .bio-text {
   margin-left: 1.5em;
 }
