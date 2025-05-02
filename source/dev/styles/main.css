@@ -568,6 +568,10 @@ figure:hover .credit {
   margin: 4em 0;
 }
 
+.leaflet-container {
+  z-index: 1;
+}
+
 .leaflet-bar span {
   color: #25408f;
 }
