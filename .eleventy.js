@@ -6,6 +6,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./source/scripts/");
     eleventyConfig.addPassthroughCopy("./source/downloads/");
     eleventyConfig.addWatchTarget("./source/styles/");
+
+    // copy these files without processing them for dev
+    eleventyConfig.addPassthroughCopy("./source/dev/");
+
     // return the configuration object
     return {
       htmlTemplateEngine: "njk",
