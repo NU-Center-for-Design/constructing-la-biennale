@@ -316,10 +316,6 @@ p.big {
   .section.three-up .content {
     flex: 1;
   }
-  .section.pagenav {
-    flex-direction: row;
-    font-size: 0.9em;
-  }
 }
 .intro {
   position: relative;
@@ -376,6 +372,20 @@ p.big {
   margin-left: 0.25em;
 }
 
+@media screen and (max-width: 800px) {
+  .section.pagenav span {
+    display: none;
+    background-color: lime;
+  }
+  .button.next svg,
+  .button.prev svg {
+    transform: scale(2);
+  }
+  .section.pagenav {
+    flex-direction: row;
+    font-size: 0.9em;
+  }
+}
 .section.people {
   display: flex;
   justify-content: space-around;
