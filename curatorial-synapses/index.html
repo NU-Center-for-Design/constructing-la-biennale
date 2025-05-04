@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="The Making Of Intelligens. Natural. Artificial. Collective.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nu-center-for-design.github.io/constructing-la-biennale/">
+<meta property="og:image" content="https://nu-center-for-design.github.io/constructing-la-biennale/images/thumbnail.png">
+<meta property="og:description" content="A project by Politecnico di Torino / Dipartimento di Architettura e Design and Northeastern University Developed for INTELLIGENS. NATURAL. ARTIFICIAL. COLLECTIVE. 19th International Architecture Exhibition - La Biennale di Venezia, 10 May - 23 November 2025 at the Giardini della Biennale.">
+<meta property="og:site_name" content="The Making Of Intelligens. Natural. Artificial. Collective.">
+<link rel="icon" href="/images/favicon/favicon.ico" sizes="32x32">
+<link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+<link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+
+<title>Curatorial Synapses</title>
+<link rel="stylesheet" href="/styles/main.css">
+<style>
+
+:root {
+    --page-color: #e6372a;
+    --page-background: #fff200;
+    --title-color: #112c8f;
+    --navbar-hover-color: #e6372a;
+    --navbar-hover-background:  #112c8f;
+}
+
+</style>
+</head>
+<body class="">
+<h1 class="pagetitle"><span class="prefix">B</span>&nbsp;<span>Curatorial Synapses</span></h1>    
+<div class="navbar">
+    <div class="navbar-head">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+    </div>
+    <div class="navbar-body">
+          <a href="/" class="navbar-item"><span class="prefix"></span> Introduction</a>
+          <a href="/constructing-la-biennale/" class="navbar-item"><span class="prefix"></span> Constructing la Biennale</a>
+          <a href="/linking-legacies/" class="navbar-item"><span class="prefix">A</span> Linking Legacies</a>
+          <a href="/curatorial-synapses/" class="navbar-item"><span class="prefix">B</span> Curatorial Synapses</a>
+          <a href="/exhibiting-in-practice/" class="navbar-item"><span class="prefix">C</span> Exhibiting in Practice</a>
+          <a href="/the-making-of-intelligens/" class="navbar-item"><span class="prefix">D</span> The Making Of Intelligens</a>
+          <a href="/team/" class="navbar-item"><span class="prefix"></span> Team</a>
+          <a href="/padiglione-centrale/" class="navbar-item"><span class="prefix"></span> Padiglione Centrale</a>
+        <hr>
+        <a href="/downloads/Contrucing_la_Biennale_LR.pdf" class="navbar-item"><span class="prefix"></span> <b>Download PDF Boklet</b></a>
+    </div>
+</div>
+<div class="pagebody">
+  
+
+<!-- title ================================== -->
+
+<section class="section one-up">
+    <div class="content">
+        <h2 class="subtitle">Tracing the Curatorial Process of <em>Intelligens. Natural. Artificial.&nbsp;Collective.</em></h2>
+    </div>
+</section>
+
+
+<!-- photos ================================= -->
+
+<section class="section one-up gapless">
+    <div class="content">
+        <!-- 
+        I_A2_1598X400.pdf 
+        -->
+        <div id="yaneva-diagram" style="height: 600px;"></div>    
+    </div>
+</section>
+
+
+<!-- caption ================================ -->
+
+<section class="section one-up">
+    <div class="content">
+        <p lang="it">IT / Una parete lunga 23 metri offre una visualizzazione critica del processo curatoriale della mostra Intelligens. Natural. Artificial. Collective. Sulla sinistra, una mappa attoriale rivela il lavoro del team curatoriale, dei progettisti e dei grafici che hanno contribuito. Da qui si apre il ventaglio delle proposte e dei progetti selezionati, che si svolgono lungo le dimensioni interpretative della curatela. Approfondimenti etnografici, sotto forma di brevi dialoghi, aggiungono profondità e contesto.</p>
+        <p lang="en">EN / Stretching across a 23-meter-long wall, this critical visualization unpacks the curatorial process behind the exhibition Intelligens. Natural. Artificial. Collective. On the left, an actor diagram maps the work of the curatorial team, exhibition designers, and graphic designers who shaped it. From this nexus, threads representing the selected applications and projects extend, unfolding through the interpretative dimensions of curation. Ethnographic insights, presented as excerpts from interviews, further enrich the narrative by adding depth and context.</p>
+    </div>
+</section>
+
+
+<!-- photos ================================= -->
+
+
+<section class="section one-up gapless">
+    <div class="content">
+        <!-- 
+        I_A2_389X400.pdf 
+        -->
+        <div id="ciucarelli-flow" style="height: 600px;"></div>    
+    </div>
+</section>
+
+<!-- pagenav ================================ -->
+
+<section class="section pagenav">
+    <a class="button prev" href="/linking-legacies/"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg> <span>Linking Legacies</span></a>
+    <a class="button next" href="/exhibiting-in-practice/"><span>Exhibiting in Practice</span> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></a>
+</section>
+
+
+<!-- image viewer =========================== -->
+
+<link rel="stylesheet" href="/styles/leaflet.css">
+<script src="/scripts/leaflet.js"></script>
+<script>
+
+// ciucarelli-flow
+var flowMap = L.map('ciucarelli-flow', { crs: L.CRS.Simple, minZoom: -3, maxZoom: 1, attributionControl: false });
+var flowImage = L.imageOverlay( '../images/ciucarelli-flow.jpg', [[0,0], [1200,5265]] ).addTo(flowMap);
+flowMap.setView( [600, 2500], -1.2 ); 
+
+// yaneva-diagram
+var diagramMap = L.map('yaneva-diagram', { crs: L.CRS.Simple, minZoom: -3, maxZoom: 0.5, attributionControl: false });
+var diagramImage = L.imageOverlay( '../images/yaneva-diagram.jpg',  [[0,0], [4134,4000]]).addTo(diagramMap);
+diagramMap.setView( [2000, 2000],  -1.2); 
+
+</script>
+
+</div>
+<script src="/scripts/scripts.js"></script>
+</body>
+</html>
