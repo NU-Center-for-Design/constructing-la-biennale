@@ -350,6 +350,7 @@ p.big {
   border-radius: 1.5em;
   height: 3em;
   text-decoration: none;
+  width: fit-content;
 }
 
 .button:hover {
