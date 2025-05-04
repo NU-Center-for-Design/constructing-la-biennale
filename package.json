@@ -7,7 +7,7 @@
     "watch:sass": "sass --watch source/styles:build/styles",
     "build:sass": "sass source/styles:build/styles",
     "watch:eleventy": "eleventy --serve",
-    "build:eleventy": "eleventy",
+    "build:eleventy": "eleventy --pathprefix='/constructing-la-biennale'",
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:*"
   },
