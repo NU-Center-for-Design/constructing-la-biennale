@@ -1,0 +1,22 @@
+
+$red: #e6372a;
+$yellow: #fff200;
+$blue: #25408f;
+$darkblue: #112c8f;
+
+// responsive breakpoint
+$mobile-width: 800px;
+
+:root {
+    --page-color: #{$yellow};
+    --page-background: #{$blue};
+    --titlebar-size: 4rem;
+    --title-color: #{$red};
+    --navbar-hover-color: #{$yellow};
+    --navbar-hover-background: #{$red};
+    --flex-gap: 1rem;
+    --person-width: 300px;
+    --section-gap: 4rem;
+    --text-width: 610px;
+    --max-width: 1200px;
+}

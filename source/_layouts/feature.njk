@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+{% include "meta.njk" %}
+<title>{{title}}</title>
+<link rel="stylesheet" href="{{ '/styles/main.css' | url}}">
+<style>
+
+:root {
+    --page-color: #e6372a;
+    --page-background: #fff200;
+    --title-color: #112c8f;
+    --navbar-hover-color: #e6372a;
+    --navbar-hover-background:  #112c8f;
+}
+
+</style>
+</head>
+<body class="">
+<h1 class="pagetitle"><span class="prefix">{{ prefix }}</span>&nbsp;<span>{{ title | safe }}</span></h1>    
+{% include "navbar.njk" %}
+<div class="pagebody">
+  {{ content | safe }}
+</div>
+<script src="{{ '/scripts/scripts.js' | url }}"></script>
+</body>
+</html>

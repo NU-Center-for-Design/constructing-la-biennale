@@ -1,0 +1,136 @@
+@use 'variables' as *;
+
+.figure-bordered {
+    outline: none;
+}
+
+.figure-bordered img {
+    outline: 1px solid $red;
+}
+
+.figure-bordered figcaption,
+.figure-bordered figcaption p {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
+figure {
+    position: relative;
+}
+
+figure .credit {
+    display: none;
+}
+
+figure:hover .credit {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 10px;
+    padding: 0.2em 1em;
+    color: $yellow;
+    background-color: $blue;
+}
+
+.document-link {
+    display: flex;
+    text-decoration: none;
+}
+
+.document-link:hover {
+    text-decoration: underline;
+}
+
+.document-link svg {
+    margin-right: 0.5em;
+}
+
+
+// constructing diagram -------------------------
+
+.constructing-diagram {
+    position: relative;
+}
+
+.constructing-diagram img {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.marker {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $red;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    color: $yellow;
+    background-color:$red;
+    text-decoration: none;
+    transform: translate(-50%, -50%);
+}
+
+.marker .detail {
+    opacity: 0;
+    position: absolute;
+    top: -1.5rem;
+    color: $red;
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+
+.marker.d .detail {
+    top: 2rem    
+}
+
+.marker:hover {
+    color: $red;
+    background-color: $yellow;
+}
+
+.marker:hover .detail {
+    opacity: 1;;
+}
+
+.marker.a {
+    left: 18.5%;
+    top: 12%;
+}
+
+.marker.b {
+    left: 35.9%;
+    top: 12%;
+}
+
+.marker.c {
+    left: 60%;
+    top: 12%;
+}
+
+.marker.d {
+    left: 85.5%;
+    top: 88%;
+}
+
+// constructing title ===========================
+
+.constucting-title {
+    margin: 4em 0;
+}
+
+
+// leaflet ======================================
+
+.leaflet-container {
+    z-index: 1;
+}
+
+.leaflet-bar span {
+    color: $blue;
+}

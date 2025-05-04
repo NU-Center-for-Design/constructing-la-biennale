@@ -1,0 +1,71 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+
+// people =======================================
+
+.section.people {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.person {
+  padding: 2em;
+  width: fit-content;
+}
+
+.headshot {
+  width: 12em;
+  position: relative;
+}
+
+.headshot-img {
+  width: 100%;
+  border: 3px solid $blue;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.headshot-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.headshot-name {
+  position: absolute;
+  color: color.adjust($yellow, $lightness: -5%);  
+  bottom: 8%;
+  left: 50%;
+  width: 75%;
+  font-size: 18px;
+  line-height: 0.75em;
+  font-weight: 900;
+}
+
+.bio-title {
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: -2em;
+  width: 16em;
+  min-height: 3.6em;
+  text-align: center;
+}
+
+@media screen and (max-width: $mobile-width) {
+  .person {
+    padding: 0.5em;
+  }
+  .bio-title {
+    margin-bottom: 0;
+  }
+}
+
+.bio-text {
+  margin-left: 1.5em;
+}
+

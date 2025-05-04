@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
+{% include "meta.njk" %}
 <title>{{title}}</title>
-<title>{{title}}</title>
-<link rel="stylesheet" href="{{ '/styles/bundle.css' | url}}">
+<link rel="stylesheet" href="{{ '/styles/main.css' | url}}">
+<style>
+</style>
 </head>
-<body class="has-navbar-fixed-top">
-<section class="section">
-  <div class="columns">
-    <div class="column is-8 is-offset-2">
-      <div class="content">
-        <h1>{{ title}}</h1>
-        {{ content | safe }}
-      </div>
-    </div>
-  </div>
-</section>
+<body class="">
+<h1 class="pagetitle">{{ title }}</h1>    
+{% include "navbar.njk" %}
+<div class="pagebody">
+  {{ content | safe }}
+</div>
 <script src="{{ '/scripts/scripts.js' | url }}"></script>
 </body>
 </html>

@@ -1,0 +1,140 @@
+@use 'variables' as *;
+
+
+// page title ===================================
+
+.pagetitle {
+  position: fixed;    
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: calc(var(--titlebar-size));
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  height: var(--titlebar-size);
+  width: 100vh;
+  top: 100vh;
+  left: 0;
+  transform-origin: left top;
+  transform: rotate(-90deg);
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 0.5em;
+  color: var(--title-color);
+  background-color: var(--page-background);
+  z-index: +1;
+}
+
+.pagetitle .prefix {
+  margin-right: 0.25em;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--title-color);
+  text-align: center;
+}
+
+
+// page body ====================================
+
+.pagebody {
+  margin-top: 0;
+  margin-left: var(--titlebar-size);
+  padding: 0 1rem 0 1px;
+}
+
+.pagebody section {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+
+// section ======================================
+
+.section {
+  display: flex;
+  flex-direction: row;
+  gap: var(--flex-gap);
+  flex-wrap: wrap;
+  width: 100%;
+}
+  
+.section + .section {
+  margin-top: var(--section-gap);
+}
+
+.section.collapse-margin .section {
+  margin-top: 0;
+}
+  
+.section img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+  
+.section.gapless {
+  gap: 0;
+}
+  
+.section.one-up .content {
+  margin: 0 auto;
+  max-width: var(--text-width);
+}
+  
+.section.one-up.gapless .content {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+}
+  
+.section.two-up .content {
+  flex: 0 0 calc(50% - var(--flex-gap)/2);
+}
+  
+.section.two-up.gapless .content {
+  flex: 0 0 50%;
+}
+  
+.section.three-up .content {
+  flex: 0 0 calc(100%/3 - var(--flex-gap));
+}
+  
+.section.three-up.gapless .content {
+  flex: 0 0 calc(100%/3);
+}
+
+@media screen and (max-width: $mobile-width) {
+  .section {
+    flex-direction: column;
+  }
+  .section.one-up .content,
+  .section.two-up .content,
+  .section.three-up .content {
+    flex: 1;
+  }
+}
+
+
+// intro ========================================
+
+.intro {
+  position: relative;
+  margin: 4em auto 4em auto;
+  max-width: var(--text-width);
+}
+
+.titlegraphic {
+  position: relative;
+  height: 1px;
+  margin-bottom: 110%;
+}
+
+.titlegraphic img {
+  position: absolute;
+  top: -175%;
+  left: -50%;
+  width: 150%;
+}

@@ -1,0 +1,16 @@
+<div class="navbar">
+    <div class="navbar-head">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+    </div>
+    <div class="navbar-body">
+        {%- for link in navlinks %}
+          <a href="{{ link.url | url }}" class="navbar-item"><span class="prefix">{{ link.prefix }}</span> {{ link.title }}</a>
+        {%- endfor %}
+        <hr>
+        <a href="{{ '/downloads/Contrucing_la_Biennale_LR.pdf' | url }}" class="navbar-item"><span class="prefix"></span> <b>Download PDF Boklet</b></a>
+    </div>
+</div>

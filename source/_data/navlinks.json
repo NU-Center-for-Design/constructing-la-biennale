@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Introduction",
+        "url": "/"
+    },
+    {
+        "title": "Constructing la Biennale",
+        "url": "/constructing-la-biennale/"
+    },
+    {
+        "prefix": "A",
+        "title": "Linking Legacies",
+        "url": "/linking-legacies/"
+    },
+    {
+        "prefix": "B",
+        "title": "Curatorial Synapses",
+        "url": "/curatorial-synapses/"
+    },
+    {
+        "prefix": "C",
+        "title": "Exhibiting in Practice",
+        "url": "/exhibiting-in-practice/"
+    },
+    {
+        "prefix": "D",
+        "title": "The Making Of Intelligens",
+        "url": "/the-making-of-intelligens/"
+    },
+    {
+        "title": "Team",
+        "url": "/team/"
+    },
+    {
+        "title": "Padiglione Centrale",
+        "url": "/padiglione-centrale/"
+    }
+]

@@ -1,0 +1,89 @@
+---
+title: "Linking Legacies"
+prefix: "A"
+layout: "feature.njk"
+
+---
+
+
+<!-- title ================================== -->
+
+<section class="section one-up">
+    <div class="content">
+        <h2 class="subtitle">A Networked History of Biennale&nbsp;Architettura</h2>
+    </div>
+</section>
+
+
+<!-- photos ================================= -->
+
+<section class="section one-up gapless">
+    <div class="content">
+        <!-- 
+        <img src="{{ '/images/EA1_3001X802_LOW.jpg' | url }}" alt="">
+        <div class="credit">Image Credit: Constructing la Biennale team</div> 
+        -->
+        <div id="barabasi-network" style="height: 600px;"></div>    
+        <p><a class="button" href="https://venice25.barabasilab.com/"><span>Explore the network</span> {% include "iconnext.njk" %}</a></p>
+    </div>
+</section>
+
+
+<!-- caption ================================ -->
+
+<section class="section one-up">
+    <div class="content">
+        <p lang="it">IT / Nella parte superiore della faux façade, una nuvola di punti larga 30 metri traccia la storia della Biennale Architettura (1980-2023). I nodi rappresentano progettisti e collaboratori, aggregati ai loro progetti in forma di collettivo. I colori individuano le edizioni della Biennale Architettura, mostrando come partecipazioni ricorrenti annullano i confini cronologici e aggregano eventi distinti in un unico processo di innovazione architettonica. Il risultato è una vivida rappresentazione del modo in cui le idee riaffiorano nel tempo, e costruiscono una narrazione sul progetto di architettura contemporaneo.</p>
+        <p lang="en">EN / In the upper part of the faux façade, a 30-meter cloud-like network diagram charts the history of the main exhibitions of Biennale Architettura from 1980 to 2023. Each node represents an architect or collaborator, with connecting strands mapping their links to collective projects. Color-coded by Biennale edition, the diagram reveals how repeated participations blur chronological boundaries, merging distinct events into a unified, evolving field of architectural experimentation. The result is a vivid artistic representation of continuous innovation, illustrating how creative individuals and ideas resurface over time to shape the broader narrative of contemporary architecture. A video on the reverse side of the wall animates the evolving tapestry depicted in the network diagram.</p>
+    </div>
+</section>
+
+
+<!-- photos ================================= -->
+
+<section class="section one-up gapless">
+    <div class="content">
+        <!-- 
+        <img src="{{ '/images/EA_3_711X400.jpg' | url }}" alt="">
+        <div class="credit">Image Credit: Constructing la Biennale team</div> 
+        -->
+        <div id="barabasi-names" style="height: 600px;"></div>    
+    </div>
+</section>
+
+
+<!-- caption ================================ -->
+
+<section class="section one-up">
+    <div class="content">
+        <p lang="it">IT / Nella parte inferiore della faux façade, tutte le edizioni della Biennale Architettura (1975-2023) sono visualizzate singolarmente attraverso cluster di dati. I partecipanti sono rappresentati come nodi e raggruppati in base alla loro partecipazione ai progetti. Un elenco completo di nomi, con evidenziati quelli di chi ha preso parte più volte alla mostra, traccia l’arco di 50 anni.</p>
+        <p lang="en">EN / In the lower part of the faux façade, each edition of Biennale Architettura (1975–2023) is rendered as an individual network. Each participant appears as a node, linked to the projects they contributed to. A comprehensive list spans this fifty-year arc, with names in bold marking those who participated multiple times.</p>
+    </div>
+</section>
+
+
+<!-- pagenav ================================ -->
+
+<section class="section pagenav">
+    <a class="button prev" href="{{ '/constructing-la-biennale/' | url }}">{% include "iconprev.njk" %} <span>Constructing la Biennale</span></a>
+    <a class="button next" href="{{ '/curatorial-synapses/' | url }}"><span>Curatorial Synapses</span> {% include "iconnext.njk" %}</a>
+</section>
+
+
+<!-- image viewer =========================== -->
+
+<link rel="stylesheet" href="{{ '/styles/leaflet.css' | url}}">
+<script src="{{ '/scripts/leaflet.js' | url }}"></script>
+<script>
+
+// barabasi-network
+var networkMap = L.map('barabasi-network', {crs: L.CRS.Simple, minZoom: -1.5, maxZoom: 1, attributionControl: false});
+var networkImage = L.imageOverlay('../images/barabasi-network.jpg', [[0,0], [850,3182]]).addTo(networkMap);
+networkMap.setView([450, 1500], -0.5); 
+
+// barabasi-names
+var namesMap = L.map('barabasi-names', {crs: L.CRS.Simple, minZoom: -3.5, maxZoom: 1, attributionControl: false});
+var namesImage = L.imageOverlay('../images/barabasi-names.jpg', [[0,0], [5621,10000]]).addTo(namesMap);
+namesMap.setView([2500, 5000], -2); 
+
+</script>

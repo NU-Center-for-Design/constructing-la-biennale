@@ -1,0 +1,124 @@
+---
+title: "Team"
+layout: "credits.njk"
+
+---
+
+
+<!-- title =================================== -->
+
+<section class="section one-up">
+  <div class="content">
+      <h2 class="subtitle">Team</h2>
+  </div>
+</section>
+
+
+<!-- principals ============================= -->
+
+<section class="section two-up">
+  {% for person in team %}
+    {% if person.type == "principal" %}
+    <div class="content person">
+      <div class="headshot">
+        <div class="headshot-img">
+          <img src="{{ ('/images/headshots/' + person.image) | url }}" alt="{{ person.name }}">
+        </div>
+        <div class="headshot-name">{{ person.name }}</div>
+      </div>
+      <div class="bio">
+        <div class="bio-title">
+          {{ person.institution }}<br />
+          {{ person.lab }}
+        </div>
+        <div class="bio-text">
+          {% for paragraph in person["bio-it"] %}
+            <p lang="it">{{ paragraph }}</p>
+          {% endfor %}
+          {% for paragraph in person["bio-en"] %}
+            <p lang="en">{{ paragraph }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</section>
+
+
+<!-- team =================================== -->
+
+<section class="section people">
+  {% for person in team %}
+    {% if person.type == "team" %}
+    <div class="person">
+      <div class="headshot">
+        <div class="headshot-img">
+          <img src="{{ ('/images/headshots/' + person.image) | url }}" alt="{{ person.name }}">
+        </div>
+        <div class="headshot-name">{{ person.name }}</div>
+      </div>
+      <div class="bio">
+        <div class="bio-title">
+          {{ person.institution }}<br />
+          {{ person.lab }}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</section>
+
+
+<!-- credits ================================ -->
+
+<section class="section one-up">
+<div class="content">
+  <h4>Constructing la Biennale</h4>
+  <p>
+    <strong>Participants:</strong><br>
+    <strong>Department of Architecture and Design - DAD, Politecnico di Torino</strong><br>
+    Michele Bonino (coordinator)<br>
+    Albena Yaneva<br>
+    <strong>BarabasiLab, Northeastern University</strong><br>
+    Albert-László Barabási<br>
+    <strong>Center for Design, Northeastern University</strong><br>
+    Paolo Ciuccarelli
+  </p>
+  <p>
+    <strong>Authorial Collaborators:</strong><br>
+    <strong>DAD, Politecnico di Torino:</strong> Edoardo Bruno, Valeria Federighi, Camilla Forina, Monica Naso (Architectural Design and Curatorial Coordination); Micol Rispoli (Ethnography of Architecture)<br>
+    <strong>BarabasiLab:</strong> Csaba Both, Alice Grishchenko, Daria Koshkina (Network Science)<br>
+    <strong>Center for Design:</strong> Todd Linkner, Matthew Blanco (Information Design and Data Visualization)<br>
+    <strong>University of Manchester:</strong> Benjamin Blackwell (Ethnography of Architecture)    
+  </p>
+  <p>
+    <strong>Technical Collaborators:</strong><br>
+    SABO Studio<br>
+    Multimedia Lab, DAD, Politecnico di Torino (filming and editing Riccardo Covino and Pietro Merlo)
+  </p>
+  <p>
+    <strong>Team Members:</strong><br>
+    <strong>DAD, Politecnico di Torino:</strong> Alp Arda with Noha Lentz, Zhenyi Chai (Architectural Design and Curatorial Coordination)<br>
+    <strong>BarabasiLab:</strong> Ábel Elekes, Rodrigo Dorantes Gilardi, Yixuan Liu, Marco Buongiorno Nardelli (Network Science)<br>
+    <strong>Center for Design:</strong> Lindsey Henriques (Information Design and Data Visualization)<br>
+    <strong>Geomatics for Cultural Heritage Lab, DAD PoliTo</strong>
+  </p>
+  <p>
+    <strong>Supporters:</strong><br>
+    Fondazione Compagnia di San Paolo; Camera di Commercio di Torino; Department of Network and Data Science - Central European University; Politecnico di Torino; Northeastern University; SECAP S.p.A.; REPLY  S.p.A.
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <img src="{{ '/images/supporters-logo-block.svg' | url }}" alt="">
+  </p>
+</div>
+</section>
+
+
+<!-- pagenav ================================ -->
+
+<section class="section pagenav">
+  <a class="button prev" href="{{ '/the-making-of-intelligens/' | url }}">{% include "iconprev.njk" %} <span>The Making Of Intelligens</span></a>
+  <a class="button next" href="{{ '/padiglione-centrale' | url }}"><span>Padglione Centrale</span> {% include "iconnext.njk" %}</a>
+</section>

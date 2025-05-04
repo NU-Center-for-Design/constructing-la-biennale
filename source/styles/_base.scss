@@ -1,0 +1,67 @@
+@use 'variables' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  color: var(--page-color);
+  background-color: var(--page-background);
+}
+
+body {
+  font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.2em;
+}
+
+@media screen and (max-width: $mobile-width) {
+    body {
+      font-size: 16px;
+    }
+}
+
+a {
+  color: inherit;
+}
+
+p:lang(it) {
+  font-weight: 600;
+}
+
+p:lang(en) {
+  font-weight: 300;
+}
+
+h1, h2 {
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 600;
+}
+
+figure {
+  margin: 0;
+  display: block;
+  width: 100%;
+  outline: 1px solid var(--title-color);
+}
+
+figure img {
+  display: block;
+}
+
+p.big {
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.6em;
+}
+
+@media screen and (max-width: $mobile-width) {
+  p.big {
+    font-size: 1.2em;
+  }
+}
